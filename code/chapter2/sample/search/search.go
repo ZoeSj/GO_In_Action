@@ -10,13 +10,14 @@ import (
 var matchers = make(map[string]Matcher)
 
 // Run performs the search logic.
-// run执行搜索逻辑
+// run执行搜索逻辑 searchTerm是string类型的参数 这个参数是run函数要搜索的搜索项，就是main函数中的"president"
 func Run(searchTerm string) {
 	// Retrieve the list of feeds to search through.
 	//获取需要搜索的数据源列表
+	//run函数第一件事就是获取数据源feeds列表，这些数据源从互联网上抓取数据，之后对数据使用特定的搜索项进行匹配。
 	//：= 简化变量声明运算符，用于声明一个变量，同时给这个变量赋予初值
-	feeds, err := RetrieveFeeds()
-
+	feeds, err := RetrieveFeeds() //这个函数返回两个值，第一个返回值是一组feed类型的切片，切片是一种实现了一个动态数组的引用类型。
+	//第二个返回值是一个错误值。
 	if err != nil {
 		log.Fatal(err)
 	}
