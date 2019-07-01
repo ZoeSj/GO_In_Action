@@ -1,3 +1,4 @@
+
 package search
 
 // defaultMatcher implements the default matcher.

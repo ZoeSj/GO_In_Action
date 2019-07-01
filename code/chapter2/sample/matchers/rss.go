@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"regexp"
 
-	"github.com/goinaction/code/chapter2/sample/search"
+	"github.com/GO_In_Action/code/chapter2/sample/search"
 )
 
 type (
